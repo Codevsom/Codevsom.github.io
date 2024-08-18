@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>C Programming Basics: Getting Started</title>
+	<style>
+		  *,body{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+      .header {
+        background-color: #4600FF;
+        padding: 20px;
+        font-family: monospace;
+        width: 100vh;
+        color: white;
+      }
+     .top-nav{
+      padding:10px;
+      display:flex;
+      gap:15px;
+    }
+    .top-nav a{
+      display:block;
+    }
+  h1,h2,p,code,button{
+    margin:10px;
+  }
+    code{
+      color:#5B05FF;
+      background:#E3E3E3;
+    }
+    button{
+      width:99%;
+      padding:10px;
+      background:#5500FF;
+      color:white;
+      border:none;
+      border-radius:100px;
+      font-family:monospace;
+      transition:0.6s;
+    }
+    button:hover{
+      background:white;
+      border:1px solid #5500FF;
+      color:#5500FF;
+    }
+      footer{
+      margin-top:30px;
+      padding:50px;
+      background:#75717F;
+      color:white;
+      text-align:center;
+    }
+    a{
+        text-decoration:none;
+      font-family:monospace;
+    }
+    .root{
+      padding:15px;
+    }
+    .img-contain{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    img{
+      width:60vw;
+      height:40vh;
+    }
+    @media only screen and (min-width:720px){
+      img{
+      width:45vw;
+      height:30vh;
+      }
+    }
+	</style>
+</head>
+<body>
+  <header class="header">
+    <p>digital dreamscapes - by somnath pan</p>
+  </header>
+	<section class="root">
+		<div class="top-nav">
+			<a href="blogs.html">tutorials</a>
+			<a href="codeditor.html">code</a>
+			<a href="index.html">home</a>
+		</div>
+		<div class="img-contain">
+			<img src="c.png" alt="c.png">
+		</div>
+		<h1>C Programming Basics: Getting Started</h1>
+		<p>Welcome to our C programming tutorial! In this tutorial, we'll cover the fundamental C concepts and syntax to get you started.</p>
+		<br>
+		<h2>Introduction to C</h2>
+		<p>C is a general-purpose programming language that provides a structured approach to programming. It was developed by Dennis Ritchie in 1972 and is considered one of the most influential programming languages of all time.</p>
+		
+		<h3>Features of C Language</h3>
+		
+		<ul>
+		  <li><b>Variables</b>: Store data in variables with specific data types (int, char, float, etc.)</li>
+		  <li><b>Operators</b>: Perform arithmetic, comparison, logical, and assignment operations</li>
+		  <li><b>Control Structures</b>: Use if-else statements, switch statements, loops (for, while, do-while), and jumps (break, continue, return) to control program flow</li>
+		  <li><b>Functions</b>: Reuse code with functions that take arguments and return values</li>
+		  <li><b>Arrays</b>: Store collections of values in arrays</li>
+		  <li><b>Strings</b>: Store text in strings</li>
+		  <li><b>Pointers</b>: Store memory addresses and manipulate data using pointers</li>
+		</ul>
+		
+		<h3>Characteristics of C Language</h3>
+		
+		<ul>
+		  <li><b>Portable</b>: Can run on various platforms with minimal modifications</li>
+		  <li><b>Efficient</b>: Provides direct access to hardware resources</li>
+		  <li><b>Flexible</b>: Supports structured, modular, and object-oriented programming</li>
+		</ul>
+		
+		<h3>Applications of C Language</h3>
+		
+		<ul>
+		  <li><b>Operating Systems</b>: Windows, Linux, macOS</li>
+		  <li><b>Embedded Systems</b>: Microcontrollers, robots, appliances</li>
+		  <li><b>Games</b>: Many games are built using C or C-derived languages</li>
+		  <li><b>System Programming</b>: Device drivers, system utilities, and more</li>
+		</ul>
+		
+		<p>Overall, C is a powerful and versatile language that provides a solid foundation for programming.</p>
+		<h2>Variables and Data Types</h2>
+<p>In C programming, a variable is a name given to a memory location that stores a value.</p>
+
+<h3>Variables</h3>
+
+<p>A variable has three main attributes:</p>
+
+<ul>
+<li><b>Name</b>: The identifier given to the variable.</li>
+<li><b>Data Type</b>: The type of value the variable can hold.</li>
+<li><b>Value</b>: The actual value stored in the variable.</li>
+</ul>
+
+<h3>Data Types</h3>
+
+<p>C has several built-in data types:</p>
+
+<ul>
+<li><b>Int</b> (int): Whole numbers, e.g., 1, 2, 3</li>
+<li><b>Char</b> (char): Single characters, e.g., 'a', 'b', 'c'</li>
+<li><b>Float</b> (float): Decimal numbers, e.g., 3.14, -0.5</li>
+<li><b>Double</b> (double): Double-precision decimal numbers</li>
+</ul>
+
+<p>These data types determine the size and range of values that can be stored in a variable.</p>
+<pre>
+  <code>
+    int a = 1
+    char b = "hello"
+  </code>
+</pre>
+		<h2>Operators</h2>
+		<p>Use operators for arithmetic, comparison, logical operations, and more.</p>
+		<code>
+			int sum = 5 + 3;
+			int isGreater = 5 > 3;
+		</code>
+		<h2>Control Structures</h2>
+		<p>Use <code>if</code>, <code>else</code>, <code>switch</code>, <code>for</code>, <code>while</code>, and <code>do-while</code> statements to control program flow.</p>
+		<code>
+			if (age > 18) {
+				printf("You are an adult");
+			}
+		</code>
+		<h2>Functions</h2>
+		<p>Declare functions to reuse code and perform tasks.</p>
+		<code>
+			void greet() {
+				printf("Hello!");
+			}
+		</code>
+		<h2>Arrays and Strings</h2>
+		<p>Use arrays to store collections of values and strings to store text.</p>
+		<code>
+			int scores[5] = {90, 80, 70, 60, 50};
+			char name[] = "John Doe";
+		</code>
+		<h2>Pointers</h2>
+		<p>Use pointers to store memory addresses and manipulate data.</p>
+		<code>
+			int* ptr = &age;
+		</code>
+		<h2>Conclusion and Next Steps</h2>
+		<p>Congratulations! You've learned the basic C concepts and syntax. Practice building your own C programs using this tutorial as a reference. In the next tutorial, we'll explore advanced C topics.</p>
+		<h2>Frequently Asked Questions</h2>
+		<dl>
+			<dt><b>What is C?</b></dt>
+			<dd>C is a general-purpose programming language.</dd>
+			<dt><b>What is a variable in C?</b></dt>
+			<dd>A variable is a container that holds a value.</dd>
+			<dt><b>How do I declare a function in C?</b></dt>
+			<dd>Use the <code>return-type function-name(parameters)</code> syntax.</dd>
+			<dt><b>What is a pointer in C?</b></dt>
+			<dd>A pointer is a variable that stores a memory address.</dd>
+		</dl>
+	</section>
+	<footer>
+		<p>©somnath pan</p>
+		<p>all rights reserved</p>
+		<a href="tutorials.html">tutorials</a>
+		<a href="index.html">home</a>
+		<a href="codeditor.html">code</a>
+	</footer>
+</body>
+</html>

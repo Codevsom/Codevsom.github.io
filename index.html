@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <meta name="description" content="welcome to my online hub:unlock expert insights and knowledge with Somnath,your trusted online resource for coding expertise and innovative solutions">
+  <title>DIGITAL DREAMSCAPES-SOMNATH PAN</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      overflow-x:hidden;
+    }
+    .header{
+      background-color:#4600FF;
+      padding:20px;
+      font-family:monospace;
+      width:100vh;
+      color:white;
+    }
+    .hero{
+      padding:50px;
+      background-color:#FFC700; 
+    }
+    .hero p{
+      font-family:monospace;
+    }
+    .hero h1{
+      color:black;
+      font-family:Verdana,sans-serif;
+      animation:2.5s in;
+      font-size:40px;
+    }
+    .hero button{
+      padding:10px;
+      border:none;
+      background-color:#4600FF;
+      color:white;
+      font-family:monospace;
+      border-radius:10px;
+      margin-top:10px;
+      transition:0.6s;
+    }
+    .hero button:hover{
+      background-color:#6EB1FF;
+      transition:0.6s;
+    }
+    .nav{
+      margin:auto;
+      background-color:#00FFBC;
+      width:50%;
+      padding:20px;
+      margin-top:10px;
+      border-radius:100px;
+      text-align:center;
+    }
+    .nav a{
+      text-decoration:none;
+      color:#000;
+      margin:2px;
+    }
+    .about{
+      padding:20px;
+      font-family:monospace;
+    }
+    .about h2{
+      margin:20px;
+      padding:10px;
+      border: 1px solid black;
+    }
+    
+    .code{
+      padding:50px;
+      background-color:#FFCA11; 
+    }
+    .code button{
+      padding:10px;
+      font-family:monospace;
+      background-color:#3700FF;
+      color:#ffffff;
+      border:none;
+      transition:0.6s;
+      margin:5px;
+    }
+    .code button:hover{
+      background-color:#6EB1FF;
+      transition:0.6s;
+    }
+    .code h1{
+      font-family:monospace;
+      font-size:50px;
+     font-weight:bold;
+    }
+    footer{
+      margin-top:30px;
+      padding:50px;
+      background:#75717F;
+      color:white;
+      text-align:center;
+    }
+    a{
+        text-decoration:none;
+      font-family:monospace;
+    }
+    .tutorials {
+      width:100vw;
+      display:flex;
+      flex-direction:row;
+      align-items:center;
+      margin-top:20px;
+    }
+    .card{
+      width:32.222%;
+      min-height:100px;
+      text-align:center;
+      border:1px solid black;
+      margin:5px;
+      padding:10px;
+      font-family:Courier;
+      transition:0.6s;
+    }
+    .card:hover{
+      box-shadow:5px 5px 2px #000;
+    }
+    img{
+      width:100%;
+      height:5%;
+    }
+    .avatar{
+      border-radius:100px;
+      background:white;
+      width:200px;
+      height:200px;
+    }
+    .challenge {
+  background-color: #f0f0f0;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top:40px;
+}
+
+.challenge h1 {
+  color: #333;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.challenge p {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.challenge button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.challenge button:hover {
+  background-color: #3e8e41;
+}
+    @keyframes in{
+      0%{
+        opacity:0;
+      }
+      100%{
+        opacity:1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!--header-->
+<header class="header">
+  <p>digital dreamscapes - by somnath pan</p>
+</header>
+<!--hero-->
+<article class="hero">
+  <h1>WELCOME TO DIGITAL DREAMSCAPES</h1>
+  <p>where code meets creativity</p>
+  <button onclick=open_blog()>explore tutorials</button>
+  <button onclick=open_editor()>code something</button>
+</article>
+<!--about section-->
+<section class="about">
+  <img class="avatar" src="avatar.jpg" alt="avatar.png">
+  <p>"Hello! I'm Somnath Pan, a grade 8 student with a passion for coding. I started my coding journey at the age of 9 and have been hooked ever since. When I'm not in school, you can find me coding away, exploring new ideas and projects. My dream is to become an AI expert and create innovative solutions that make a difference.
+  <br>
+  Apart from coding, I'm also an IIT JEE aspirant, working hard to achieve my goals. I believe that coding and problem-solving skills will help me succeed in my future endeavors.
+  <br>
+  I'm excited to share my coding experiences, projects, and learnings with you through this website. Let's explore the world of code and AI together!"
+  <br>
+  <b>my expertise:</b>
+  <ul>
+    <li><b>programming languages</b></li>
+    <li>python</li>
+    <li>javascript</li>
+    <li>c/c++</li>
+    <li>java</li>
+    <li style="color:blue"><b>web development</b></li>
+    <li>html/css</li>
+    <li>node.js</li>
+    <li>bootstrap</li>
+    <li style="color:red"><b>data science & ai</b></li>
+    <li>pandas</li>
+    <li>scikit learn</li>
+  </ul></p>
+</section>
+<!--section-->
+<section class="code">
+  <h1>"FEELING STUCK?"</h1>
+  <button onclick=open_editor()>use my code editor»</button>
+  <button onclick=open_blog()>explore tutorials</button>
+</section>
+<!--section-->
+<h2 style="text-align: center; font-family: monospace;margin:10px;">LEARN WITH ME: FEATURED COURSES</h2>
+<section class="tutorials">
+  <article class="card">
+    <div class="image">
+      <img src="html.png" alt="">
+    </div>
+    <div class="tinfo">
+      <h2><a href="HTML-basics.html">HTML COURSE</a></h2>
+    </div>
+</article>
+<article class="card">
+    <div class="image">
+      <img src="css.png" alt="">
+    </div>
+    <div class="tinfo">
+      <h2><a href="CSS-basics.html">CSS COURSE</a></h2>
+    </div>
+</article>
+<article class="card">
+    <div class="image">
+      <img src="js.png" alt="">
+    </div>
+    <div class="tinfo">
+      <h2><a href="JS-basics.html">JS COURSE</a></h2>
+    </div>
+</article>
+</section>
+<section class="challenge">
+  <h1>Already Have Some Serious Coding Skills?</h1>
+  <p>don't worry i have a ton of challenges for you</p>
+  <button onclick="open_ds()">check out my debugging station</button>
+</section>
+<!--footer-->
+<footer>
+  <p>©somnath pan</p>
+  <p>all rights reserved</p>
+  <a href="tutorials.html">tutorials</a>
+  <a href="codeditor.html">code</a>
+  <a href="index.html">home</a>
+  <a href="DEBUGGING_STATION.html">debugging station</a>
+</footer>
+<!--script-->
+<script>
+  function open_editor(){
+    window.location.href = "codeditor.html";
+  }
+  function open_blog() {
+    window.location.href = "tutorials.html";
+  }
+  function open_ds(){
+    window.location.href = "DEBUGGING_STATION.html";
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <meta name="description" content="Somnath's HTML CSS JS EDITOR: a free online coding environment for web developers,with instant feedback and debugging tools">
+  <title>SOMNATH'S HTML | CSS | JS EDITOR</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      overflow-x:hidden;
+    }
+        .header{
+      background-color:#4600FF;
+      padding:20px;
+      font-family:monospace;
+      width:100vh;
+      color:white;
+    }
+    .titlebar{
+      padding:10px;
+      font-size:15px;
+      font-family:monospace;
+      background-color:#010F15;
+      color:#BDC6D4;
+      font-weight: bold;
+      border-bottom:1px solid #BDC6D4;
+    }
+    .topnav{
+      display:flex;
+      align-items:center;
+      font-family:monospace;
+      background:#010F15;
+    }
+    .topnav button{
+      padding:10px;
+      background:#333;
+      color:#BDC6D4;
+      font-family:monospace;
+      transition:0.6s;
+      border: none;
+    }
+    .topnav button:hover{
+      background-color:white;
+    }
+    #input{
+      width:100%;
+      height:50vh;
+      padding:10px;
+      background-color:#000;
+      color:#ECFF07;
+      font-family:monospace;
+    }
+    #input:focus{
+      outline:none;
+    }
+
+    #output{
+      height:50vh;
+      width:100vw;
+      border:1px solid black;
+    }
+    #console{
+      width:100%;
+      height:70%;
+      display:flex;
+      flex-direction:column;
+      position:fixed;
+      top:100px;
+      left:0;
+      padding:10px;
+      background:#000;
+      border:1px solid white;
+      display:none;
+    }
+    #console input{
+      width:100%;
+      padding:10px;
+      background:black;
+      border:1px solid white;
+      color:#00FF00;
+      font-family:monospace;
+    }
+    #console textarea{
+      padding:20px;
+      background:black;
+      border:none;
+      color:green;
+      font-family:monospace;
+      height:70%;
+    }
+    #console textarea:hover{
+      outline:none;
+    }
+    #console input:hover{
+      outline:none;
+    }
+    #console button{
+      width:100%;
+    }
+    footer{
+      margin-top:30px;
+      padding:50px;
+      background:#75717F;
+      color:white;
+      text-align:center;
+    }
+    a{
+        text-decoration:none;
+        font-family:monospace;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+  <p>digital dreamscapes - by somnath pan</p>
+</header>
+  <!--title bar-->
+  <div class="titlebar">
+    <p>DREAMSCAPES-HTML EDITOR</p>
+  </div>
+  <!--top navigation-->
+  <div class="topnav">
+    <button onclick=home()><span class="fa-solid fa-house"></span></button>
+    <button onclick=run()><span class="fa-solid fa-play"></span></button>
+    <button onclick=showconsole()><span class="fa-solid fa-terminal"></span></button>
+  </div>
+  <!--editor-->
+<textarea id="input" placeholder="start coding">
+</textarea>
+<!--output area-->
+<div class="wrap">
+<iframe id="output" src="" frameborder="0"></iframe>
+</div>
+
+<!--console-->
+<div id="console">
+  <input id="console-input" placeholder="console input">
+  <textarea id="console-output" readonly></textarea>
+  <button onclick=runconsole()><span class="fa-solid fa-play"></span></button>
+</div>
+
+<!--footer-->
+<footer>
+  <p>©somnath pan</p>
+  <p>all rights reserved</p>
+  <a href="tutorials.html">tutorials</a>
+  <a href="codeditor.html">code</a>
+  <a href="index.html">home</a>
+    <a href="DEBUGGING_STATION.html">debugging station</a>
+</footer>
+
+<!--script-->
+<script>
+  const out = document.getElementById("output");
+  const inp = document.getElementById("input");
+  let consoleinput = document.getElementById("console-input");
+    let consoleoutput = document.getElementById("console-output");
+  function run(){
+    try{
+    out.srcdoc = inp.value;
+    }catch(error){
+      consoleoutput.value+=`error:${error.message}\n`;
+      out.srcdoc=`<h1>ERROR WHILE RUNNING THE CODE</h1><p>${error.message}</p>`
+    }
+  }
+  function showconsole(){
+    if(document.getElementById("console").style.display == "none"){
+    document.getElementById("console").style.display ="block"
+    }else{
+      document.getElementById("console").style.display ="none"
+    }
+  }
+  function runconsole(){
+    try{
+      let res = eval(consoleinput.value)
+    consoleoutput.value+= res + "\n";
+    }catch(error){
+      consoleoutput.value+=`error:${error.message}\n`;
+    }
+  }
+  function home(){
+    window.location.href='index.html';
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PYTHON BASICS: PROGRAMMING YOUR FIRST SCRIPT</title>
+<style>
+  *,body{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+      .header {
+        background-color: #4600FF;
+        padding: 20px;
+        font-family: monospace;
+        width: 100vh;
+        color: white;
+      }
+     .top-nav{
+      padding:10px;
+      display:flex;
+      gap:15px;
+    }
+    .top-nav a{
+      display:block;
+    }
+  h1,h2,p,code,button{
+    margin:10px;
+  }
+    code{
+      color:#5B05FF;
+      background:#E3E3E3;
+    }
+    button{
+      width:99%;
+      padding:10px;
+      background:#5500FF;
+      color:white;
+      border:none;
+      border-radius:100px;
+      font-family:monospace;
+      transition:0.6s;
+    }
+    button:hover{
+      background:white;
+      border:1px solid #5500FF;
+      color:#5500FF;
+    }
+      footer{
+      margin-top:30px;
+      padding:50px;
+      background:#75717F;
+      color:white;
+      text-align:center;
+    }
+    a{
+        text-decoration:none;
+      font-family:monospace;
+    }
+    .root{
+      padding:15px;
+    }
+    .img-contain{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    img{
+      width:60vw;
+      height:40vh;
+    }
+    @media only screen and (min-width:720px){
+      img{
+      width:45vw;
+      height:30vh;
+      }
+    }
+</style>
+</head>
+<body>
+  <header class="header">
+    <p>digital dreamscapes - by somnath pan</p>
+  </header>
+<section class="root">
+<div class="top-nav">
+<a href="blogs.html">tutorials</a>
+<a href="codeditor.html">code</a>
+<a href="index.html">home</a>
+</div>
+<div class="img-contain">
+<img src="python.png" alt="python.png">
+</div>
+<h1>Python Basics: Programming Your First Script</h1>
+<p>Welcome to our Python Basics tutorial! In this tutorial, we'll cover the fundamental Python concepts and syntax to program your first script.</p>
+<p>This Python tutorial assumes that you have a basic understanding of programming concepts, if you're new to programming, consider exploring our <a href="PROGRAMMING-fundamentals.html">programming-basics tutorial</a>, before proceeding to this Python tutorial</p>
+
+<h2>Introduction to Python</h2>
+<p>Python is a high-level, easy-to-learn language, it is one of the most popular programming languages in the world,its used extensively in fields like, machine learning,AI,web development,data science etc</p>
+<p>python has a ton of built in modules and libraries,which makes it easier to code.</p>
+<p>let's see how to code in python!</p>
+<h2>Printing Output</h2>
+<p>Use the <code>print()</code> function to output text to the screen.</p>
+<p>The <code>print()</code> function takes one or more arguments and displays them on the screen.</p>
+<p>You can use the <code>print()</code> function to output strings, numbers, or any other data type.</p>
+<p>For example, you can use the <code>print()</code> function to print a simple message, like "Hello, World!"</p>
+<h2>Variables and Data Types</h2>
+
+<p>Variables are entities whose value can be changed throughout the program execution,we store different values to variables,to avoid repetitive code writing,variables forms the basics of every programming languages</p>
+<p>Use the assignment operator (=) to declare variables and assign data types.</p>
+<code>
+x = 5
+y = "Hello, World!"
+</code>
+<h2>Conditional Statements</h2>
+<p>Use <code>if</code> and <code>else</code> statements to make decisions in your code.</p>
+<code>
+if x > 5:
+print("x is greater than 5")
+else:
+print("x is less than or equal to 5")
+</code>
+<p>the syntax for if-else,is</p>
+<code>
+  if &lt;condition&gt;: <br>
+     &lt;statement&gt; <br>
+  else: <br>
+     &lt;statement&gt;
+</code>
+<p>
+  first,the condition in if is checked,if its true then the statements defined in if is executed,if it becomes false,the statements in the else,is executed.
+</p>
+<h2>Functions</h2>
+<p>functions allows,us to store a piece of code,which runs when it is called,it is a very useful feature in python,it allows you to avoid repeating a code,instead,you just write a single function,and use it as many time as you wish!</p>
+<p>Use functions to reuse code and perform tasks.</p>
+<code>
+def greet(name):
+print(f"Hello, {name}!")
+greet("John Doe")
+</code>
+<h2>Loops</h2>
+<p>consider a scenario where you had to write first 1000 numbers in python,what would you do?,you would probably write print function for each number,but this would require a lot of time,and also it would increase the execution time</p>
+<p>but don't we have loops in python,which allows us to run a specific code for a specified number of times!</p>
+<p>Use <code>for</code> loops to iterate over sequences.</p>
+<code>
+for i in range(5):
+print(i)
+</code>
+<h2>Conclusion and Next Steps</h2>
+<p>Congratulations! You've learned the basic Python concepts and syntax. Practice building your own scripts using this tutorial as a reference. In the next tutorial, we'll explore Python lists and dictionaries.</p>
+<h2>Frequently Asked Questions</h2>
+<dl>
+<dt><b>What is Python?</b></dt>
+<dd>Python is a high-level, easy-to-learn programming language.</dd>
+<dt><b>What is a variable in Python?</b></dt>
+<dd>A variable is a container that holds a value.</dd>
+<dt><b>How do I declare a function in Python?</b></dt>
+<dd>Use the <code>def</code> keyword to declare a function.</dd>
+<dt><b>What is a loop in Python?</b></dt>
+<dd>A loop is used to iterate over sequences.</dd>
+<dt><b>What is the difference between <code>print()</code> and <code>return</code> in Python?</b></dt>
+<dd><code>print()</code> outputs text to the screen, while <code>return</code> exits a function and returns a value.</dd>
+</dl>
+</section>
+<footer>
+<p>©somnath pan</p>
+<p>all rights reserved</p>
+<a href="tutorials.html">tutorials</a>
+<a href="index.html">home</a>
+<a href="codeditor.html">code</a>
+  <a href="DEBUGGING_STATION.html">debugging station</a>
+</footer>
+</body>
+</html>

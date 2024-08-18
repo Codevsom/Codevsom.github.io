@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JavaScript Debugging Station</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+     .top-nav{
+      padding:10px;
+      display:flex;
+      gap:15px;
+      text-align:center;
+    }
+    .top-nav a{
+      display:block;
+      text-decoration:none;
+       text-align:center;
+    }
+
+    body {
+      background-color: #f0f0f0;
+      font-family: monospace;
+    }
+
+    #console {
+      width: 80%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 50px;
+      left: 10%;
+      padding: 20px;
+      background: #000;
+      border: 1px solid white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #console h1,
+    h2,
+    p {
+      color: white;
+    }
+
+    #console input {
+      width: 100%;
+      padding: 10px;
+      background: black;
+      border: 1px solid white;
+      color: #00FF00;
+      font-family: monospace;
+    }
+
+    #console textarea {
+      padding: 20px;
+      background: black;
+      border: none;
+      color: green;
+      font-family: monospace;
+      height: 70%;
+      resize: none;
+    }
+
+    #console textarea:hover {
+      outline: none;
+    }
+
+    #console input:hover {
+      outline: none;
+    }
+
+    #console button {
+      width: 100%;
+      padding: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    #console button:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+
+<body>
+    <section class="root">
+    <div class="top-nav">
+      <a href="blogs.html">tutorials</a>
+      <a href="codeditor.html">code</a>
+      <a href="index.html">home</a>
+    </div>
+    
+  <div id="console">
+    <h2>JavaScript Debugging Station</h2>
+    <p>here is a buggy code,use your debug skills to debug it! and hit check to check your answer</p>
+    <textarea id="console-input" placeholder="console input"></textarea>
+    <textarea id="console-output" readonly></textarea>
+    <button onclick="check()">CHECK</button>
+    <button onclick="reload()">RELOAD</button>
+  </div>
+  <script>
+    const database = {
+      "buggyCodes": [
+        {
+          "code": "const user = {}; console.log(user.name.toUppercase());",
+          "answer": "const user = { name: 'John' }; console.log(user.name.toUpperCase());"
+        },
+        {
+          "code": "let x = 10; if (true) let x = 20; console.log(x);",
+          "answer": "let x = 10; if (true) { let y = 20; console.log(y); } console.log(x);"
+        },
+        {
+          "code": "function add(a, b) { a + b; console.log('Hello'); } console.log(add(2, 3));",
+          "answer": "function add(a, b) { return a + b; } console.log(add(2, 3));"
+        },
+        {
+          "code": "const arr = [1, 2, 3]; console.log(arr[3]); console.log(arr.forEeach((x) => console.log(x)));",
+          "answer": "const arr = [1, 2, 3]; console.log(arr[0]); console.log(arr.forEach((x) => console.log(x)));"
+        },
+        {
+          "code": "function divide(a, b) { return a / c; console.log('Division successful'); } console.log(divide(10, 2));",
+          "answer": "function divide(a, b) { return a / b; } console.log(divide(10, 2));"
+        }
+      ]
+    }
+    const input = document.getElementById("console-input");
+    const output = document.getElementById("console-output");
+    let db_val = database.buggyCodes;
+    const rindex = Math.floor(Math.random() * db_val.length);
+    rpo = db_val[rindex];
+    input.innerHTML = rpo.code;
+
+    function check() {
+      a = input.value.trim().toLowerCase().replace(/\s+/g)
+      if (a === rpo.answer.trim().toLowerCase().replace(/\s+/g)) {
+        output.innerHTML = "CORRECT ANSWER!"
+        setTimeout(reload(), 2000)
+      } else {
+        output.style.color = "red";
+        output.innerHTML = "TRY AGAIN";
+        setTimeout(() => {
+          output.innerHTML = ""
+        }, 2000)
+      }
+    }
+
+    function reload() {
+      window.location.reload()
+    }
+  </script>
+</body>

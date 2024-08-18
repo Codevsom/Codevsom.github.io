@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PYTHON INTERMEDIATE: DATA STRUCTURES AND OBJECT-ORIENTED PROGRAMMING</title>
+    <style>
+  *,body{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+      .header {
+        background-color: #4600FF;
+        padding: 20px;
+        font-family: monospace;
+        width: 100vh;
+        color: white;
+      }
+     .top-nav{
+      padding:10px;
+      display:flex;
+      gap:15px;
+    }
+    .top-nav a{
+      display:block;
+    }
+  h1,h2,p,code,button{
+    margin:10px;
+  }
+    code{
+      color:#5B05FF;
+      background:#E3E3E3;
+    }
+    button{
+      width:99%;
+      padding:10px;
+      background:#5500FF;
+      color:white;
+      border:none;
+      border-radius:100px;
+      font-family:monospace;
+      transition:0.6s;
+    }
+    button:hover{
+      background:white;
+      border:1px solid #5500FF;
+      color:#5500FF;
+    }
+      footer{
+      margin-top:30px;
+      padding:50px;
+      background:#75717F;
+      color:white;
+      text-align:center;
+    }
+    a{
+        text-decoration:none;
+      font-family:monospace;
+    }
+    .root{
+      padding:15px;
+    }
+    .img-contain{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    img{
+      width:60vw;
+      height:35vh;
+    }
+    @media only screen and (min-width:720px){
+      img{
+      width:45vw;
+      height:25vh;
+      }
+    }
+    </style>
+</head>
+<body>
+  <header class="header">
+    <p>digital dreamscapes - by somnath pan</p>
+  </header>
+    <section class="root">
+        <div class="top-nav">
+            <a href="blogs.html">tutorials</a>
+            <a href="codeditor.html">code</a>
+            <a href="index.html">home</a>
+        </div>
+        <div class="img-contain">
+            <img src="python.png" alt="python.png">
+        </div>
+        <h1>Python Intermediate: Data Structures and Object-Oriented Programming</h1>
+        <p>Welcome to our Python Intermediate tutorial! In this tutorial, we'll cover advanced Python concepts and syntax to enhance your programming skills.</p>
+        <h2>Data Structures: Lists and Tuples</h2>
+        <p>Lists and tuples are two fundamental data structures in Python.</p>
+        <code>
+            my_list = [1, 2, 3, 4, 5]
+            my_tuple = (1, 2, 3, 4, 5)
+        </code>
+        <h2>Data Structures: Dictionaries and Sets</h2>
+        <p>Dictionaries and sets are two additional data structures in Python.</p>
+        <code>
+            my_dict = {"name": "John", "age": 30}
+            my_set = {1, 2, 3, 4, 5}
+        </code>
+        <h2>Object-Oriented Programming: Classes and Objects</h2>
+
+<h2>Object-Oriented Programming (OOPs)</h2>
+
+<p>Object-Oriented Programming (OOPs) is a way of writing code that organizes and structures data and functionality into objects that interact with each other.</p>
+
+<h3>Key Concepts:</h3>
+
+<ul>
+<li><b>Objects</b>: Represent real-world entities or concepts, with attributes (data) and methods (functions) that describe and interact with them.</li>
+<li><b>Classes</b>: Blueprints or templates that define the characteristics and behaviors of objects.</li>
+<li><b>Inheritance</b>: Allows one class to inherit properties and behavior from another class.</li>
+</ul>
+
+<h3>Benefits:</h3>
+
+<ul>
+<li><b>Modularity</b>: Code is organized into reusable and modular objects.</li>
+<li><b>Reusability</b>: Objects can be reused in multiple contexts.</li>
+<li><b>Easier Maintenance</b>: Changes to code are localized to specific objects or classes.</li>
+</ul>
+
+<p><b>In summary</b>, OOPs is a programming approach that uses objects, classes, and inheritance to create reusable, modular, and maintainable code.</p>
+        <h3>CLASSES</h3>
+        <p>Classes and objects are the foundation of Object-Oriented Programming (OOP) in Python.</p>
+        <code>
+            class Person:
+                def __init__(self, name, age):
+                    self.name = name
+                    self.age = age
+            person = Person("John", 30)
+        </code>
+        <p>In Python, a class is like a blueprint or a template that defines the characteristics and behaviors of an object.
+        <br>
+        Think of a class like a recipe for making a cake:
+        <br>
+        - The recipe (class) defines the ingredients (characteristics) and the instructions (behaviors) for making the cake (object).
+        <br>
+        - You can use the recipe to make multiple cakes (objects), each with the same characteristics and behaviors.
+        <br>
+        A class typically includes:
+        <br />
+        1. *Attributes* (data): These are the characteristics of the object, like the cake's flavor, size, and color.
+        <br>
+        2. *Methods* (functions): These are the actions the object can perform, like mixing, baking, and decorating the cake.
+        <br>
+        When you create an object from a class, you're essentially creating a new instance of that class, with its own set of attributes and methods.
+        <br>
+        Here's a simple example: <br />
+       <code>
+        class Dog:
+        def __init__(self, name, age):
+        <br>
+        self.name = name
+        <br>
+        self.age = age
+        <br>
+        def bark(self):
+        <br>
+        print("Woof!")
+        <br>
+        my_dog = Dog("Fido", 3)
+        <br>
+        print(my_dog.name) # Output: Fido
+        <br />
+        my_dog.bark() # Output: Woof!
+        </code>
+        <br>
+        In this example, `Dog` is the class, and `my_dog` is an object created from that class. The class defines the attributes `name` and `age`, and the method `bark()`. The object `my_dog` has its own values for `name` and `age`, and can call the `bark()` method.</p>
+        <p>
+          <h3>OBJECTS</h3>
+          
+          <p>In Python, an <b>object</b> is an instance of a class, which represents a real-world entity or concept. Objects have:</p>
+          
+          <ul>
+            <li><b>Attributes</b> (data): These are the characteristics of the object, such as name, age, color, etc.</li>
+            <li><b>Methods</b> (functions): These are the actions the object can perform, such as moving, speaking, calculating, etc.</li>
+          </ul>
+          
+          <p>Think of an object as a noun, and its attributes and methods as the adjective and verbs that describe and interact with it.</p>
+          
+          <p>Here's an example:</p>
+          
+          <pre>
+          <code>
+          class Dog:
+          def *init*(self, name, age):
+          self.name = name
+          self.age = age
+          
+          ```def bark(self):
+              print("Woof!")
+          ```
+          my_dog = Dog("Fido", 3)
+          </code>
+          </pre>
+          
+          <p>In this example:</p>
+          
+          <ul>
+            <li><code>Dog</code> is the class (blueprint)</li>
+            <li><code>my_dog</code> is an object (instance of the class)</li>
+            <li><code>name</code> and <code>age</code> are attributes (data) of the object</li>
+            <li><code>bark</code> is a method (action) of the object</li>
+          </ul>
+          
+          <p>You can access and modify an object's attributes and call its methods using dot notation:</p>
+          
+          <pre>
+          <code>
+          print(my_dog.name)  # Output: Fido
+          my_dog.bark()  # Output: Woof!
+          my_dog.age = 4
+          print(my_dog.age)  # Output: 4
+          </code>
+          </pre>
+          
+          <p>Objects are useful for:</p>
+          
+          <ul>
+            <li>Modeling real-world entities and concepts</li>
+            <li>Encapsulating data and behavior</li>
+            <li>Creating reusable and modular code</li>
+            <li>Improving code organization and structure</li>
+          </ul>
+          
+          <p>In Python, everything is an object, including integers, strings, lists, dictionaries, functions, and even classes themselves!</p>
+        </p>
+       
+<h2>Frequently Asked Questions (FAQs) - Python Object-Oriented Programming (OOPs)</h2>
+
+<dl>
+<dt><b>Q1: What is Object-Oriented Programming (OOPs) in Python?</b></dt>
+<dd><p>OOPs is a programming paradigm that uses objects and classes to organize and structure code. In Python, OOPs allows developers to create reusable and modular code using classes, objects, inheritance, polymorphism, and encapsulation.</p></dd>
+
+<dt><b>Q2: What is a class in Python?</b></dt>
+<dd><p>A class is a blueprint or template that defines the characteristics and behaviors of an object. Classes define the structure and behavior of an object, including its attributes (data) and methods (functions).</p></dd>
+
+<dt><b>Q3: What is an object in Python?</b></dt>
+<dd><p>An object is an instance of a class, which represents a real-world entity or concept. Objects have attributes (data) and methods (functions) that describe and interact with them.</p></dd>
+
+<dt><b>Q4: What is inheritance in Python?</b></dt>
+<dd><p>Inheritance is a mechanism that allows one class to inherit the attributes and methods of another class. The child class inherits the properties and behavior of the parent class and can also add new attributes and methods or override existing ones.</p></dd>
+
+<dt><b>Q5: What is polymorphism in Python?</b></dt>
+<dd><p>Polymorphism is the ability of an object to take on multiple forms. In Python, polymorphism allows objects of different classes to be treated as objects of a common superclass.</p></dd>
+
+<dt><b>Q6: What is encapsulation in Python?</b></dt>
+<dd><p>Encapsulation is the concept of hiding the implementation details of an object from the outside world and only exposing the necessary information through public methods.</p></dd>
+
+<dt><b>Q7: How do I create a class in Python?</b></dt>
+<dd><p>To create a class in Python, use the <code>class</code> keyword followed by the class name and a colon. Define the class attributes and methods inside the class definition.</p></dd>
+
+<dt><b>Q8: How do I create an object in Python?</b></dt>
+<dd><p>To create an object in Python, use the class name followed by parentheses, passing in any required arguments to the constructor method (<code>__init__</code>).</p></dd>
+
+<dt><b>Q9: What is the difference between a class attribute and an instance attribute?</b></dt>
+<dd><p>A class attribute is shared by all instances of a class, while an instance attribute is unique to each instance of a class.</p></dd>
+
+<dt><b>Q10: Can I modify a class attribute in Python?</b></dt>
+<dd><p>Yes, class attributes can be modified using the class name or an instance of the class. However, modifying a class attribute affects all instances of the class.</p></dd>
+</dl>
+    </section>
+    <footer>
+        <p>©somnath pan</p>
+        <p>all rights reserved</p>
+        <a href="tutorials.html">tutorials</a>
+        <a href="index.html">home</a>
+        <a href="codeditor.html">code</a>
+          <a href="DEBUGGING_STATION.html">debugging station</a>
+    </footer>
+</body>
+</html>

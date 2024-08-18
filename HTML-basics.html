@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML BASICS: STRUCTURING YOUR FIRST WEB PAGE</title>
+  <style>
+  *,body{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+      .header {
+        background-color: #4600FF;
+        padding: 20px;
+        font-family: monospace;
+        width: 100vh;
+        color: white;
+      }
+     .top-nav{
+      padding:10px;
+      display:flex;
+      gap:15px;
+    }
+    .top-nav a{
+      display:block;
+    }
+  h1,h2,p,code,button{
+    margin:10px;
+  }
+    code{
+      color:#5B05FF;
+      background:#E3E3E3;
+    }
+    button{
+      width:99%;
+      padding:10px;
+      background:#5500FF;
+      color:white;
+      border:none;
+      border-radius:100px;
+      font-family:monospace;
+      transition:0.6s;
+    }
+    button:hover{
+      background:white;
+      border:1px solid #5500FF;
+      color:#5500FF;
+    }
+      footer{
+      margin-top:30px;
+      padding:50px;
+      background:#75717F;
+      color:white;
+      text-align:center;
+    }
+    a{
+        text-decoration:none;
+      font-family:monospace;
+    }
+    .root{
+      padding:15px;
+    }
+    .img-contain{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    img{
+      width:60vw;
+      height:30vh;
+    }
+    @media only screen and (min-width:720px){
+      img{
+      width:45vw;
+      height:20vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <section class="root">
+    <div class="top-nav">
+      <a href="blogs.html">tutorials</a>
+      <a href="codeditor.html">code</a>
+      <a href="index.html">home</a>
+    </div>
+    
+    <div class="img-contain">
+    <img src="html.png" alt="html.png">
+     </div>
+<h1>HTML Basics: Structuring Your First Web Page</h1>
+
+<p>Welcome to our HTML Basics tutorial! In this tutorial, we'll cover the fundamental HTML elements and structure to create a basic web page.</p>
+
+<h2>Introduction to HTML</h2>
+
+<p>HTML (Hypertext Markup Language) is the standard markup language used to create web pages. It's the backbone of a website, providing the structure and content that the web browser renders to the user.</p>
+
+<h2>Basic HTML Structure</h2>
+
+<p>Every HTML document starts with the following basic structure:</p>
+
+<pre>
+  <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- page content here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+
+<p>Let's break it down:</p>
+<br>
+- <code>&lt;!DOCTYPE html&gt;: Declares the document type as HTML5.</code>
+<br>
+- <code>&lt;html&gt;: The root element of the HTML document.</code>
+<br>
+- <code>&lt;head&gt;: Contains metadata about the document, such as the title, charset, and links to external stylesheets or scripts.</code>
+<br>
+- <code>&lt;title&gt;: Sets the title of the page, displayed in the browser's title bar and search engine results</code>
+- <code>&lt;body&gt;: Contains the content of the HTML document.
+</code>
+<br>
+
+<h1>Headings and Paragraphs</h1>
+
+<p>Headings and paragraphs are basic HTML elements used to structure content.</p>
+<code>
+<br>
+- Headings: &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, etc. represent headings of different levels.
+<br>
+- Paragraphs: &lt;p&gt; represents a paragraph of text.
+<br>
+</code>
+<b>Example:</b>
+<br>
+<code>
+&lt;h1&gt;Main Heading&lt;/h1&gt;
+<br>
+&lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+</code>
+<h2>Links and Images</h2>
+<br>
+<p>Links and images are essential elements in HTML.</p>
+<code>
+<br>
+- Links: &lt;a&gt; represents a hyperlink to another web page or email address.
+<br>
+- Images: &lt;img&gt; represents an image file.
+<br>
+</code>
+<b>Example:</b>
+<br>
+&lt;a href="#"&gt;Visit&lt;/a&gt;
+&lt;img src="image.jpg" alt="An image on the page"&gt;
+<br>
+<h2>Lists and Tables</h2>
+<br>
+<p>Lists and tables help organize content.</p>
+<code>
+  
+<br>
+- Unordered Lists: &lt;ul&gt; represents an unordered list, with &lt;li&gt; representing each list item.
+<br>
+- Ordered Lists: &lt;ol&gt; represents an ordered list, with &lt;li&gt; representing each list item.
+<br>
+- Tables: &lt;table&gt; represents a table, with &lt;tr&gt; representing each table row and &lt;td&gt; representing each table data cell.
+</code>
+<br>
+<b>Example:</b>
+<code>
+&lt;ul&gt;
+<br>
+&lt;li&gt;Item 1&lt;/li&gt;
+<br>
+&lt;li&gt;Item 2&lt;/li&gt;
+<br>
+&lt;/ul&gt;
+<br>
+&lt;table&gt;
+<br>
+&lt;tr&gt;
+<br>
+&lt;td&gt;Cell 1&lt;/td&gt;
+<br>
+&lt;td&gt;Cell 2&lt;/td&gt;
+<br>
+&lt;/tr&gt;
+<br>
+&lt;/table&gt;
+<br>
+</code>
+
+<h2>Forms and Inputs</h2>
+<br>
+<p>Forms and inputs allow users to interact with the web page.</p>
+<br>
+<p>
+- <code>Forms: &lt;form&gt; represents a form, with &lt;input&gt;, &lt;textarea&gt;, and &lt;select&gt; representing different input fields.</code>
+</p>
+<br>
+<b>Example:</b>
+<br>
+<code>
+&lt;form&gt;
+&lt;label for="name"&gt;Name:&lt;/label&gt;
+&lt;input type="text" id="name" name="name"&gt;
+&lt;/form&gt;
+</code>
+<br>
+<h2>Conclusion and Next Steps</h2>
+<p>
+Congratulations! You've learned the basic HTML elements and structure. Practice building your own web page using this tutorial as a reference. In the next tutorial, we'll explore CSS basics to style your web page.
+</p>
+<button><a style="color:white" href="codeditor.html">«see it in action»</a></button>
+
+<h2>Frequently Asked Questions</h2>
+
+<dl>
+  <dt><b>What is HTML?</b></dt>
+  <dd>HTML stands for "HyperText Markup Language". It's a standard markup language used to create web pages.</dd>
+
+  <dt><b>What is the basic structure of an HTML document?</b></dt>
+  <dd>The basic structure includes the &lt;!DOCTYPE html&gt;, &lt;html&gt;, &lt;head&gt;, and &lt;body&gt; elements.</dd>
+
+  <dt><b>What is the difference between &lt;div&gt; and &lt;span&gt;?</b></dt>
+  <dd>&lt;div&gt; is a block-level element, while &lt;span&gt; is an inline element.</dd>
+
+  <dt><b>How do I add an image to a web page?</b></dt>
+  <dd>Use the &lt;img&gt; element with the src attribute to specify the image URL.</dd>
+
+  <dt><b>What is the purpose of the &lt;head&gt; section?</b></dt>
+  <dd>The &lt;head&gt; section contains metadata about the document, such as the title, charset, and links to external stylesheets or scripts.</dd>
+
+  <dt><b>How do I create a hyperlink?</b></dt>
+  <dd>Use the &lt;a&gt; element with the href attribute to specify the link URL.</dd>
+
+  <dt><b>What is the difference between &lt;ul&gt;, &lt;ol&gt;, and &lt;dl&gt;?</b></dt>
+  <dd>&lt;ul&gt; is an unordered list, &lt;ol&gt; is an ordered list, and &lt;dl&gt; is a definition list.</dd>
+
+  <dt><b>How do I add a comment to an HTML document?</b></dt>
+  <dd>Use &lt;!-- to start and --&gt; to end the comment.</dd>
+
+  <dt><b>What is the purpose of the &lt;title&gt; element?</b></dt>
+  <dd>The &lt;title&gt; element sets the title of the page, which appears in the browser's title bar and search engine results.</dd>
+
+  <dt><b>How do I create a table in HTML?</b></dt>
+  <dd>Use the &lt;table&gt; element, along with &lt;tr&gt; for table rows, &lt;td&gt; for table data cells, and &lt;th&gt; for table header cells.</dd>
+
+  <dt><b>What is the difference between &lt;strong&gt; and &lt;b&gt;?</b></dt>
+  <dd>&lt;strong&gt; indicates strong importance or emphasis, while &lt;b&gt; simply bolds the text.</dd>
+</dl>
+  </section>
+<footer>
+  <p>©somnath pan</p>
+  <p>all rights reserved</p>
+  <a href="tutorials.html">tutorials</a>
+  <a href="codeditor.html">code</a>
+  <a href="index.html">home</a>
+    <a href="DEBUGGING_STATION.html">debugging station</a>
+</footer>
+</body>
+</html>

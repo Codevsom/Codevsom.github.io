@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JS DOM: INTERACTING WITH WEB PAGES</title>
+<style>
+  *,body{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+      .header {
+        background-color: #4600FF;
+        padding: 20px;
+        font-family: monospace;
+        width: 100vh;
+        color: white;
+      }
+     .top-nav{
+      padding:10px;
+      display:flex;
+      gap:15px;
+    }
+    .top-nav a{
+      display:block;
+    }
+  h1,h2,p,code,button{
+    margin:10px;
+  }
+    code{
+      color:#5B05FF;
+      background:#E3E3E3;
+    }
+    button{
+      width:99%;
+      padding:10px;
+      background:#5500FF;
+      color:white;
+      border:none;
+      border-radius:100px;
+      font-family:monospace;
+      transition:0.6s;
+    }
+    button:hover{
+      background:white;
+      border:1px solid #5500FF;
+      color:#5500FF;
+    }
+      footer{
+      margin-top:30px;
+      padding:50px;
+      background:#75717F;
+      color:white;
+      text-align:center;
+    }
+    a{
+        text-decoration:none;
+      font-family:monospace;
+    }
+    .root{
+      padding:15px;
+    }
+    .img-contain{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    img{
+      width:60vw;
+      height:35vh;
+    }
+    @media only screen and (min-width:720px){
+      img{
+      width:45vw;
+      height:25vh;
+      }
+    }
+</style>
+</head>
+<body>
+  <header class="header">
+    <p>digital dreamscapes - by somnath pan</p>
+  </header>
+<section class="root">
+<div class="top-nav">
+<a href="tutorials.html">tutorials</a>
+<a href="codeditor.html">code</a>
+<a href="index.html">home</a>
+</div>
+<div class="img-contain">
+<img src="js.png" alt="js-dom.png">
+</div>
+<h1>JS DOM: Interacting with Web Pages</h1>
+<p>Welcome to our JS DOM tutorial! In this tutorial, we'll cover the fundamental JS DOM concepts and methods to interact with web pages.</p>
+
+
+<p>This JS DOM tutorial assumes that you have a basic knowledge and understanding of HTML, CSS, and JavaScript, if you're new to these topics, consider exploring our <a href="HTML-basics.html">html-basics tutorial</a>, <a href="CSS-basics.html">css-basics tutorial</a>, and <a href="JS-basics.html">js-basics tutorial</a>, before proceeding to this JS DOM tutorial</p>
+
+
+<h2>Introduction to JS DOM</h2>
+<p>The JS DOM (Document Object Model) is a programming interface for HTML and XML documents.</p>
+<p>by using DOM you can manipulate html elements using js and add functionality to your website.</p>
+<h2>Selecting Elements</h2>
+<p>Use <code>document.getElementById()</code>,to select an element with a similar id<code>document.querySelector()</code>,this selector allows you to select an element by its class name,or id or tag name and <code>document.querySelectorAll()</code> this selects all elements with matching xlass or id.</p>
+<code>
+const element = document.getElementById('id');
+const element = document.querySelector('.class');
+const elements = document.querySelectorAll('tag');
+</code>
+<h2>Manipulating Elements</h2>
+<p>Use <code>element.textContent</code>, <code>element.innerHTML</code>, and <code>element.setAttribute()</code> to manipulate elements.</p>
+<code>
+element.textContent = 'New text';
+element.innerHTML = '<p>New HTML</p>';
+element.setAttribute('attribute', 'value');
+</code>
+<p><code>textContent and innerHTML</code>helps you to set the text content of an element</p>
+<p><code>setAttribute</code> allows you to dynamically add Attributes such as classnames and IDs to an element,it takes 2 parameters,one is the attribute you want to set and its value</p>
+<h2>Events and Event Listeners</h2>
+<p>Use <code>addEventListener()</code> to respond to user interactions.</p>
+<code>
+element.addEventListener('click', function() {
+console.log('Element clicked!');
+});
+</code>
+<p>the function,adds an event listener to an element,which,allows us to perform specific tasks,when an event occurs,such as,when a button is clicked.</p>
+<p>addEventListener function takes 2 parameters,the event name(i.e,"click","input" etc),and a call back function which triggered when the event occurs</p>
+<h2>Creating and Removing Elements</h2>
+<p>Use <code>document.createElement()</code> and <code>element.remove()</code> to create and remove elements.</p>
+<code>
+const newElement = document.createElement('tag');
+element.remove();
+</code>
+<p>to add the created element to a parent element,you will use the <code>appendChild()</code></p>
+<pre>
+  <code>
+    //select the parent
+    const parent = <br>document.getElementById('parent');
+    //create an element
+    const element = <br>document.createElement("p");
+    //set text for the element 
+    element.innerHTML = "hello,world";
+    //append to to the parent
+    parent.appendChild(element)
+  </code>
+</pre>
+<h2>Conclusion and Next Steps</h2>
+<p>Congratulations! You've learned the basic JS DOM concepts and methods. Practice building your own web page using this tutorial as a reference. In the next tutorial, we'll explore advanced JS DOM topics.</p>
+<button><a style="color:white" href="codeditor.html">«see it in action»</a></button>
+<h2>Frequently Asked Questions</h2>
+<dl>
+<dt><b>What is the JS DOM?</b></dt>
+<dd>The JS DOM is a programming interface for HTML and XML documents.</dd>
+<dt><b>How do I select elements in JS DOM?</b></dt>
+<dd>Use <code>document.getElementById()</code>, <code>document.querySelector()</code>, and <code>document.querySelectorAll()</code> to select elements.</dd>
+<dt><b>How do I manipulate elements in JS DOM?</b></dt>
+<dd>Use <code>element.textContent</code>, <code>element.innerHTML</code>, and <code>element.setAttribute()</code> to manipulate elements.</dd>
+<dt><b>What is an event listener in JS DOM?</b></dt>
+<dd>An event listener is a function that responds to user interactions.</dd>
+</dl>
+</section>
+<footer>
+<p>©somnath pan</p>
+<p>all rights reserved</p>
+<a href="tutorials.html">tutorials</a>
+<a href="index.html">home</a>
+<a href="codeditor.html">code</a>
+  <a href="DEBUGGING_STATION.html">debugging station</a>
+</footer>
+</body>
+</html>
+

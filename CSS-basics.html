@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS BASICS: STYLING YOUR FIRST WEB PAGE</title>
+	<style>
+		*, body {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		    .header {
+		      background-color: #4600FF;
+		      padding: 20px;
+		      font-family: monospace;
+		      width: 100vh;
+		      color: white;
+		    }
+		
+		h1, h2, p, code, button {
+			margin: 10px;
+		}
+		   .top-nav{
+      padding:10px;
+      display:flex;
+      gap:15px;
+    }
+    .top-nav a{
+      display:block;
+    }
+		code {
+			color: #5B05FF;
+			background: #E3E3E3;
+		}
+		
+		button {
+			width: 99%;
+			padding: 10px;
+			background: #5500FF;
+			color: white;
+			border: none;
+			border-radius: 100px;
+			font-family: monospace;
+			transition: 0.6s;
+		}
+		
+		button:hover {
+			background: white;
+			border: 1px solid #5500FF;
+			color: #5500FF;
+		}
+		
+		footer {
+			margin-top: 30px;
+			padding: 50px;
+			background: #75717F;
+			color: white;
+			text-align: center;
+		}
+		
+		a {
+			text-decoration: none;
+			font-family: monospace;
+		}
+		
+		.root {
+			padding: 15px;
+		}
+		  .img-contain{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+		img{
+      width:50vw;
+      height:35vh;
+    }
+    @media only screen and (min-width:720px){
+      img{
+      width:25vw;
+      height:20vh;
+      }
+    }
+	</style>
+</head>
+<body>
+   <header class="header">
+     <p>digital dreamscapes - by somnath pan</p>
+   </header>
+	<section class="root">
+	   <div class="top-nav">
+      <a href="blogs.html">tutorials</a>
+      <a href="codeditor.html">code</a>
+      <a href="index.html">home</a>
+    </div>
+        <div class="img-contain">
+    <img src="css.png" alt="css.png">
+     </div>
+		<h1>CSS Basics: Styling Your First Web Page</h1>
+		<p>Welcome to our CSS Basics tutorial! In this tutorial, we'll cover the fundamental CSS concepts and properties to style your web page.</p>
+		<br>
+		<p>This CSS tutorial assumes that you have a basic knowledge and understanding of html,if you're new to html,consider exploring our <a href="HTML-basics.html">html-basics tutorial</a>,before proceeding to this CSS tutorial</p>
+		<br>
+		<h2>Introduction to CSS</h2>
+		<p>CSS (Cascading Style Sheets) is a styling language used to control the layout and appearance of web pages.</p>
+		
+		<h2>Selectors and Properties</h2>
+		<p>CSS selectors target HTML elements, and properties define the styles applied to those elements.</p>
+		<code>
+			&lt;style&gt;
+			h1 {
+				color: blue;
+			}
+			&lt;/style&gt;
+		</code>
+		
+		<h2>Color and Background</h2>
+		<p>Use the <code>color</code> property for text color and <code>background-color</code> for element backgrounds.</p>
+		<code>
+			&lt;style&gt;
+			h1 {
+				color: blue;
+				background-color: yellow;
+			}
+			&lt;/style&gt;
+		</code>
+		
+		<h2>Fonts and Text</h2>
+		<p>Use the <code>font-family</code> property to set font types and <code>font-size</code> for text size.</p>
+		<code>
+			&lt;style&gt;
+			h1 {
+				font-family: Arial;
+				font-size: 36px;
+			}
+			&lt;/style&gt;
+		</code>
+		
+		<h2>Layout and Positioning</h2>
+		<p>Use the <code>display</code> property for layout and <code>position</code> for element positioning.</p>
+		<code>
+			&lt;style&gt;
+			.container {
+				display: flex;
+				position: relative;
+			}
+			&lt;/style&gt;
+		</code>
+		
+		<h2>Margin and Padding</h2>
+		<p>Use the <code>margin</code> property to add space around elements and <code>padding</code> for space between elements and their content.</p>
+		<code>
+			&lt;style&gt;
+			.container {
+				margin: 20px;
+				padding: 20px;
+			}
+			&lt;/style&gt;
+		</code>
+		
+		<h2>Border and Outline</h2>
+		<p>Use the <code>border</code> property to add borders to elements and <code>outline</code> for a border outside the element.</p>
+		<code>
+			&lt;style&gt;
+			.container {
+				border: 1px solid black;
+				outline: 1px solid red;
+			}
+			&lt;/style&gt;
+		</code>
+		
+		<h2>Conclusion and Next Steps</h2>
+		<p>Congratulations! You've learned the basic CSS concepts and properties. Practice building your own web page using this tutorial as a reference. In the next tutorial, we'll explore CSS layouts and responsive design.</p>
+		<button><a style="color:white" href="codeditor.html">«see it in action»</a></button>
+<h2>Frequently Asked Questions</h2>
+<dl>
+<dt><b>What is CSS?</b></dt>
+<dd>CSS stands for "Cascading Style Sheets". It's a styling language used to control the layout and appearance of web pages.</dd>
+
+<dt><b>What is a CSS selector?</b></dt>
+<dd>A CSS selector is a rule that targets a specific HTML element to apply styles.</dd>
+
+<dt><b>How do I apply a style to all elements on a page?</b></dt>
+<dd>Use the universal selector (*) to apply styles to all elements on a page.</dd>
+
+<dt><b>What is the cascade in CSS?</b></dt>
+<dd>The cascade refers to how styles are applied to elements, following a hierarchy of rules and priorities.</dd>
+<dt><b>What is specificity in CSS?</b></dt>
+<dd>Specificity refers to the priority of one style over another, depending on how the selector is defined.</dd>
+</dl>
+		</section>
+		<footer>
+  <p>©somnath pan</p>
+  <p>all rights reserved</p>
+  <a href="tutorials.html">tutorials</a>
+  <a href="codeditor.html">code</a>
+  <a href="index.html">home</a>
+    <a href="DEBUGGING_STATION.html">debugging station</a>
+</footer>

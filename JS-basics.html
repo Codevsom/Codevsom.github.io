@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JAVASCRIPT BASICS: PROGRAMMING YOUR FIRST WEB PAGE</title>
+	<style>
+				*, body {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			overflow-y:scroll;
+		}
+		    .header {
+		      background-color: #4600FF;
+		      padding: 20px;
+		      font-family: monospace;
+		      width: 100vh;
+		      color: white;
+		    }
+		
+		h1, h2, p, code, button {
+			margin: 10px;
+		}
+		   .top-nav{
+      padding:10px;
+      display:flex;
+      gap:15px;
+    }
+    .top-nav a{
+      display:block;
+    }
+		code {
+			color: #5B05FF;
+			background: #E3E3E3;
+		}
+		
+		button {
+			width: 99%;
+			padding: 10px;
+			background: #5500FF;
+			color: white;
+			border: none;
+			border-radius: 100px;
+			font-family: monospace;
+			transition: 0.6s;
+		}
+		
+		button:hover {
+			background: white;
+			border: 1px solid #5500FF;
+			color: #5500FF;
+		}
+		
+		footer {
+			margin-top: 30px;
+			padding: 50px;
+			background: #75717F;
+			color: white;
+			text-align: center;
+		}
+		
+		a {
+			text-decoration: none;
+			font-family: monospace;
+		}
+		
+		.root {
+			padding: 15px;
+		}
+		  .img-contain{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+		img{
+      width:90vw;
+      height:55vh;
+    }
+    @media only screen and (min-width:720px){
+      img{
+      width:50vw;
+      height:30vh;
+      }
+    }
+	</style>
+</head>
+<body>
+  <header class="header">
+    <p>digital dreamscapes - by somnath pan</p>
+  </header>
+	<section class="root">
+		<div class="top-nav">
+			<a href="blogs.html">tutorials</a>
+			<a href="codeditor.html">code</a>
+			<a href="index.html">home</a>
+		</div>
+		<div class="img-contain">
+			<img src="js.png" alt="js.png">
+		</div>
+		<h1>JavaScript Basics: Programming Your First Web Page</h1>
+		<p>Welcome to our JavaScript Basics tutorial! In this tutorial, we'll cover the fundamental JavaScript concepts and syntax to program your web page.</p>
+		<br>
+		<p>This JavaScript tutorial assumes that you have a basic knowledge and understanding of HTML and CSS, if you're new to HTML and CSS, consider exploring our <a href="HTML-basics.html">html-basics tutorial</a> and <a href="CSS-basics.html">css-basics tutorial</a>, before proceeding to this JavaScript tutorial</p>
+		<br>
+		<h2>Introduction to JavaScript</h2>
+		<p>JavaScript is a programming language used to add interactivity to web pages.</p>
+		<h2>Variables and Data Types</h2>
+		<p>Use the <code>let</code> keyword to declare variables and assign data types.</p>
+		<code>
+			let name = 'John Doe';
+			let age = 30;
+		</code>
+		<h2>Conditional Statements</h2>
+		<p>Use <code>if</code> and <code>else</code> statements to make decisions in your code.</p>
+		<code>
+			if (age > 18) {
+				console.log('You are an adult');
+			} else {
+				console.log('You are a minor');
+			}
+		</code>
+		<h2>Functions</h2>
+		<p>Use functions to reuse code and perform tasks.</p>
+		<code>
+			function greet(name) {
+				console.log(`Hello, ${name}!`);
+			}
+			greet('John Doe');
+		</code>
+		<h2>Loops</h2>
+		<p>Use <code>for</code> loops to iterate over arrays and objects.</p>
+		<code>
+			for (let i = 0; i < 5; i++) {
+				console.log(i);
+			}
+		</code>
+		<h2>Events and Event Listeners</h2>
+		<p>Use event listeners to respond to user interactions.</p>
+		<code>
+			document.getElementById('button')<br>.addEventListener('click', function() {
+				console.log('Button clicked!');
+			});
+		</code>
+		<h2>Conclusion and Next Steps</h2>
+		<p>Congratulations! You've learned the basic JavaScript concepts and syntax. Practice building your own web page using this tutorial as a reference. In the next tutorial, we'll explore JavaScript objects and arrays.</p>
+		<button><a style="color:white" href="codeditor.html">«see it in action»</a></button>
+		<h2>Frequently Asked Questions</h2>
+		<dl>
+			<dt><b>What is JavaScript?</b></dt>
+			<dd>JavaScript is a programming language used to add interactivity to web pages.</dd>
+			<dt><b>What is a variable in JavaScript?</b></dt>
+			<dd>A variable is a container that holds a value.</dd>
+			<dt><b>How do I declare a function in JavaScript?</b></dt>
+			<dd>Use the <code>function</code> keyword to declare a function.</dd>
+			<dt><b>What is an event listener in JavaScript?</b></dt>
+			<dd>An event listener is a function that responds to user interactions.</dd>
+			<dt><b>What is the difference between null and undefined in JavaScript?</b></dt>
+			<dd><code>null</code> represents an intentional absence of value, while <code>undefined</code> represents an uninitialized or absent value.</dd>
+		</dl>
+	</section>
+	<footer>
+		<p>©somnath pan</p>
+		<p>all rights reserved</p>
+		<a href="tutorials.html">tutorials</a>
+		<a href="index.html">home</a>
+		<a href="codeditor.html">code</a>
+		  <a href="DEBUGGING_STATION.html">debugging station</a>
+		</footer>
